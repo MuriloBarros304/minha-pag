@@ -1,0 +1,11 @@
+head {
+    background-color: #221212;
+    font: 300 18px 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+body {
+    font: 300 16px/140% 'Roboto Mono', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
