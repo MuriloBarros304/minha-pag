@@ -9,10 +9,10 @@ body {
     background-color: #121212;
     color: #ffffff;
     max-width: 1024px;
+    text-align: center;
 }
 
 .center {
-    text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
