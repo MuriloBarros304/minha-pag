@@ -20,7 +20,7 @@ body {
 
 }
 
-body div{
+body div p{
     display: flex;
     text-align: center;
     text-align-last: justify;
