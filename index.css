@@ -23,6 +23,7 @@ body {
 
 body div p{
     display: flex;
+    align-items: center;
     text-align:justify;
     border: 1px solid #ffffff1a;
     border-radius: 10px;
@@ -33,6 +34,7 @@ body div p{
 body div figure{
     max-width: 1024px;
     max-height: auto;
+    align-items: center;
 }
 
 body div h2{
