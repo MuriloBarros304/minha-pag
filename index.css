@@ -32,13 +32,16 @@ body div p{
 body div figure{
     max-width: 150px;
     max-height: auto;
-
 }
 
-.center {
+body div h2{
+    text-align: center;
+}
+
+/* .center {
     display: block;
     text-align: center; 
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-  } 
+  }  */
