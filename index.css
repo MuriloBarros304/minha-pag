@@ -1,5 +1,6 @@
 * {
     margin: 5px;
+    font: 200 24px 'Montserrat', sans-serif;
     padding: 5px;
     box-sizing: border-box;
     text-align: center;
@@ -7,12 +8,10 @@
 
 head {
     background-color: #221212;
-    font: 200 24px 'Montserrat', sans-serif;
     color: #ffffff;
 }
 
 body {
-    font: 300 20px/140% 'Roboto Mono', sans-serif;
     background-color: #121212;
     color: #ffffff;
 }
@@ -27,6 +26,7 @@ body {
 }
 
 .container p {
+    font: 300 20px/140% 'Roboto Mono', sans-serif;
     text-align: justify;
     margin: 10px; /* Adiciona um espaço entre os parágrafos */
 
