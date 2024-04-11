@@ -9,34 +9,40 @@ head {
     background-color: #221212;
     font: 200 24px 'Montserrat', sans-serif;
     color: #ffffff;
-    text-align: center;
 }
 
 body {
     font: 300 20px/140% 'Roboto Mono', sans-serif;
     background-color: #121212;
     color: #ffffff;
-/*     max-width: 1024px; */
-
 }
 
-body div p{
+.container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align:justify;
+    text-align: justify;
     border: 1px solid #ffffff1a;
     border-radius: 10px;
     max-width: 1024px;
-    margin: 0 auto;
+    width: 50%;
+    margin: auto; /* Centraliza o conteúdo */
 }
 
-body div figure{
+.container figure {
     max-width: 1024px;
     max-height: auto;
-    align-items: center;
-    margin: 0 auto;
+    margin: auto; /* Centraliza a figura */
 }
 
-body div h2{
+h2 {
     text-align: center;
 }
+
+/*.center {
+    display: block;
+    text-align: center; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+} */
