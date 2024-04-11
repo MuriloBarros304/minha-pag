@@ -29,12 +29,14 @@ body div p{
     border-radius: 10px;
     max-width: 1024px;
     width: 50%;
+    margin: 0 auto;
 }
 
 body div figure{
     max-width: 1024px;
     max-height: auto;
     align-items: center;
+    margin: 0 auto;
 }
 
 body div h2{
