@@ -39,11 +39,9 @@ body {
 
 .container h2{
     font: 400 32px 'Montserrat', sans-serif;
-}
-
-h2 {
     text-align: center;
 }
+
 
 /*.center {
     display: block;
