@@ -1,6 +1,5 @@
 * {
     margin: 5px;
-    font: 200 24px 'Montserrat', sans-serif;
     padding: 5px;
     box-sizing: border-box;
     text-align: center;
@@ -36,6 +35,10 @@ body {
     max-width: 1024px;
     max-height: auto;
     margin: auto; /* Centraliza a figura */
+}
+
+.container h2{
+    font: 400 24px 'Montserrat', sans-serif;
 }
 
 h2 {
