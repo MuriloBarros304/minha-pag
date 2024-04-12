@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1800px;
+    max-width: 2100px;
     width: 50%;
     margin: auto;
 }
