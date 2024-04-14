@@ -2,7 +2,6 @@
     margin: 5px;
     padding: 5px;
     box-sizing: border-box;
-    text-align: center;
 }
 
 body {
@@ -14,9 +13,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 2600px;
-    width: 50%;
-    margin: auto;
+    width: 70%;
+    margin: auto 20%;
 }
 
 .container p {
@@ -29,7 +27,7 @@ body {
 .container figure {
     max-width: 1024px;
     max-height: auto;
-    margin: auto; /* Centraliza a figura */
+    margin: auto;
 }
 
 .container h2{
@@ -38,10 +36,30 @@ body {
 }
 
 
-/*.center {
-    display: block;
-    text-align: center; 
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-} */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333; /* Adiciona um fundo para os links de navegação */
+    width: 100%; /* Faz a largura da lista ser igual à largura da janela do navegador */
+    z-index: 1000; /* Garante que os links de navegação fiquem acima de outros elementos */
+}
+
+ul li {
+    display: inline; /* Faz os itens da lista aparecerem horizontalmente */
+}
+
+ul li a {
+    display: inline-block;
+    padding: 10px 20px; /* Adiciona um espaçamento interno aos links */
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    background-color: #555; /* Adiciona uma cor de fundo quando o mouse passa sobre o link */
+}
+
