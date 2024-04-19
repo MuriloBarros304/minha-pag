@@ -30,6 +30,11 @@ body {
     margin: auto;
 }
 
+.container figcaption{
+    font: 200 10px 'Montserrat', sans-serif;
+    text-align: center;
+}
+
 .container h2{
     font: 450 32px 'Montserrat', sans-serif;
     text-align: center;
