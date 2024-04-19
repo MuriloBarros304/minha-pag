@@ -30,17 +30,13 @@ body {
     margin: auto;
 }
 
-.container div figcaption, div a{
-    font: 200 20px 'Montserrat', sans-serif;
-    text-align: center;
-}
-
 .container h2{
     font: 450 32px 'Montserrat', sans-serif;
     text-align: center;
 }
 
 #space, #peplot, #rbf {
+    font: 200 20px 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
