@@ -44,11 +44,6 @@ body {
     min-height: 100vh; /* Altura mínima da div para que o conteúdo fique centralizado verticalmente */
 }  
 
-.tab {
-    display: inline-block;
-    margin-left: 4em;
-}
-
 ul {
     list-style-type: none;
     margin: 0;
