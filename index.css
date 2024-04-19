@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #121212;
+    background-color: #0c0b14;
     color: #ffffff;
 }
 
@@ -68,6 +68,6 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: #555; /* Adiciona uma cor de fundo quando o mouse passa sobre o link */
+    background-color: #3b2168; /* Adiciona uma cor de fundo quando o mouse passa sobre o link */
 }
 
