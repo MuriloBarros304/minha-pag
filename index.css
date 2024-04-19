@@ -40,6 +40,13 @@ body {
     text-align: center;
 }
 
+#space, #peplot, #rbf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Altura mínima da div para que o conteúdo fique centralizado verticalmente */
+  }  
 
 ul {
     list-style-type: none;
