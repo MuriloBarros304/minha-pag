@@ -42,7 +42,11 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh; /* Altura mínima da div para que o conteúdo fique centralizado verticalmente */
-}  
+}
+
+.container a:hover{
+    color: #fff
+}
 
 ul {
     list-style-type: none;
