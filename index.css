@@ -44,7 +44,7 @@ body {
     min-height: 100vh; /* Altura mínima da div para que o conteúdo fique centralizado verticalmente */
 }
 
-.container a:hover{
+.container div a:hover{
     color: #fff
 }
 
