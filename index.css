@@ -35,7 +35,7 @@ body {
     text-align: center;
 }
 
-#space, #peplot, #rbf {
+#space, #peplot, #rbf , #escultor{
     font: 200 20px 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
