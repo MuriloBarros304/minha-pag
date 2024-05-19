@@ -32,6 +32,7 @@ body {
     max-width: 1024px;
     max-height: auto;
     margin: auto;
+    align-content: center;
 }
 
 .container h2{
