@@ -54,7 +54,7 @@ body {
     text-align: center;
 }
 
-#space, #peplot, #rbf , #escultor{
+#space, #peplot, #rbf , #escultor {
     font: 200 20px 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
@@ -63,7 +63,7 @@ body {
     min-height: 100vh; /* Altura mínima da div para que o conteúdo fique centralizado verticalmente */
 }
 
-.container div a:hover{
+.container div a:hover {
     color: #fff
 }
 
