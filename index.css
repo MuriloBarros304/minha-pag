@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #0c0b14;
+    background-color: #150f24;
     color: #ffffff;
 }
 
@@ -42,7 +42,7 @@ body {
 
 .container div figure figcaption {
     text-align: center;
-    margin-top: 0;
+    margin-top: 1;
 }
 
 .container h2{
@@ -50,7 +50,7 @@ body {
     text-align: center;
 }
 
-#space, #peplot, #rbf , #escultor {
+#space, #peplot, #rbf, #escultor {
     font: 200 20px 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
@@ -87,6 +87,6 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: #534964; /* Adiciona uma cor de fundo quando o mouse passa sobre o link */
+    background-color: #8474a0; /* Adiciona uma cor de fundo quando o mouse passa sobre o link */
 }
 
