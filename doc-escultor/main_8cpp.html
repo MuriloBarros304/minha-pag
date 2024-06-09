@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Escultor 3D
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.2</span>
    </div>
    <div id="projectbrief">Escultor digital para artes em cubos feito em C++</div>
   </td>
@@ -69,7 +69,8 @@ $(function() {
 <div class="title">Referência do Arquivo main.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="sculptor_8h_source.html">sculptor.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="readtxt_8h_source.html">readtxt.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funções</h2></td></tr>
@@ -92,139 +93,15 @@ Funções</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;              { <span class="comment">// Modelagem de um quarto</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="class_sculptor.html">Sculptor</a> quarto(100, 100, 100);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  quarto.setColor(1.0, 1.0, 1.0, 1); <span class="comment">// paredes</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  quarto.putBox(0, 99, 0, 99, 0, 99);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  quarto.cutBox(2, 97, 1, 99, 2, 99);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  quarto.setColor(0.99, 0.99, 0.10, 1);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  quarto.putBox(2, 12, 42, 58, 48, 64); <span class="comment">// estantes</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  quarto.cutBox(3, 13, 43, 57, 49, 63);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  quarto.putBox(2, 12, 58, 74, 64, 80);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  quarto.cutBox(3, 13, 59, 73, 65, 79);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  quarto.putBox(2, 12, 26, 42, 32, 48);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  quarto.cutBox(3, 13, 27, 41, 33, 47);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  quarto.setColor(0.39, 0.18, 0.01, 1); <span class="comment">// janela</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  quarto.putBox(34, 68, 34, 68, 0, 3);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  quarto.setColor(0.4, 0.4, 0.9, 0.3); <span class="comment">// transparencia na janela de vidro</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  quarto.cutBox(36, 50, 36, 50, 0, 3);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  quarto.cutBox(36, 50, 52, 66, 0, 3);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  quarto.cutBox(52, 66, 52, 66, 0, 3);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  quarto.cutBox(52, 66, 36, 50, 0, 3);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  quarto.putBox(36, 50, 36, 50, 2, 2);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  quarto.putBox(36, 50, 52, 66, 2, 2);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  quarto.putBox(52, 66, 52, 66, 2, 2);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  quarto.putBox(52, 66, 36, 50, 2, 2);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  quarto.setColor(0.39, 0.18, 0.01, 1); <span class="comment">// cama</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  quarto.putBox(30, 97, 10, 14, 2, 30); </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  quarto.putBox(97, 97, 14, 28, 2, 30);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  quarto.putBox(97, 97, 28, 29, 3, 29);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  quarto.putBox(30, 34, 2, 9, 26, 30); </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  quarto.putBox(30, 34, 2, 9, 3, 7); </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  quarto.putBox(93, 97, 2, 9, 3, 7); </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  quarto.putBox(93, 97, 2, 9, 26, 30); </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  quarto.setColor(0.9, 0.6, 0.1, 1);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  quarto.putBox(31, 96, 14, 20, 3, 29);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  quarto.setColor(0.9, 0.9, 0.9, 1);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  quarto.putBox(86, 96, 21, 23, 4, 28);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  quarto.setColor(0.39, 0.18, 0.01, 1); <span class="comment">// escrivaninha</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  quarto.putBox(77, 97, 30, 32, 50, 90);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  quarto.putBox(77, 79, 2, 29, 50, 52);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  quarto.putBox(77, 79, 2, 29, 88, 90);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  quarto.putBox(95, 97, 2, 29, 88, 90);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  quarto.putBox(95, 97, 2, 29, 50, 52);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  quarto.setColor(0.20, 0.4, 0.9, 1); <span class="comment">// cadeira</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  quarto.putBox(75, 90, 15, 17, 53, 68);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  quarto.putBox(75, 76, 16, 36, 53, 68);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  quarto.putBox(75, 77, 2, 15, 53, 55);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  quarto.putBox(75, 77, 2, 15, 66, 68);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  quarto.putBox(88, 90, 2, 15, 53, 55);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  quarto.putBox(88, 90, 2, 15, 66, 68);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  quarto.setColor(0.9, 0.9, 0.9, 1); <span class="comment">// papel</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  quarto.putBox(78, 90, 33, 33, 80, 89);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  quarto.setColor(0.1, 0.1, 0.1, 1); <span class="comment">// lapis</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  quarto.putBox(79, 83, 34, 34, 81, 81);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  quarto.setColor(0.1, 0.1, 0.1, 1); <span class="comment">// notebook</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  quarto.putBox(78, 88, 33, 33, 52, 69);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  quarto.putBox(88, 88, 33, 43, 52, 69);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  quarto.setColor(0.9, 0.1, 0.1, 1); <span class="comment">// livros</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  quarto.putBox(3, 11, 43, 56, 50, 50);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  quarto.putBox(3, 11, 43, 57, 54, 54);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  quarto.putBox(3, 11, 59, 73, 67, 67);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  quarto.putBox(3, 11, 59, 72, 78, 78);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  quarto.putBox(3, 11, 27, 40, 34, 34);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  quarto.putBox(3, 11, 27, 41, 40, 40);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  quarto.setColor(0.9, 0.8, 0.3, 1);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  quarto.putBox(3, 11, 27, 40, 35, 35);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  quarto.putBox(3, 11, 27, 41, 45, 45);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  quarto.putBox(3, 11, 43, 56, 51, 51);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  quarto.putBox(3, 11, 43, 56, 60, 60);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  quarto.putBox(3, 11, 43, 56, 53, 53);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  quarto.putBox(3, 11, 59, 72, 73, 73);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  quarto.putBox(3, 11, 59, 72, 70, 70);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  quarto.setColor(0.2, 0.12, 0.35, 1);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  quarto.putBox(3, 11, 27, 40, 37, 38);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  quarto.putBox(3, 11, 27, 40, 42, 42);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  quarto.putBox(3, 11, 59, 72, 69, 69);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  quarto.putBox(3, 11, 43, 56, 52, 52);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  quarto.putBox(3, 11, 43, 56, 61, 61);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  quarto.putBox(3, 11, 43, 56, 55, 55);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  quarto.putBox(3, 11, 59, 72, 71, 71);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  quarto.setColor(0.1, 0.64, 0.1, 1);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  quarto.putBox(3, 11, 27, 36, 39, 39);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  quarto.putBox(3, 11, 27, 36, 36, 36);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  quarto.putBox(3, 11, 27, 40, 43, 44);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  quarto.putBox(3, 11, 59, 70, 65, 65);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  quarto.putBox(3, 11, 43, 56, 56, 56);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  quarto.putBox(3, 11, 43, 56, 62, 62);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  quarto.putBox(3, 11, 59, 73, 72, 72);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  quarto.setColor(0.9, 0.8, 0.7, 1); <span class="comment">// piso</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  quarto.putBox(2, 97, 1, 1, 2, 99); </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  quarto.setColor(0.1, 0.1, 0.1, 1);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  quarto.putBox(2, 97, 1, 1, 80, 80);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  quarto.putBox(2, 97, 1, 1, 60, 60);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  quarto.putBox(2, 97, 1, 1, 40, 40);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  quarto.putBox(2, 97, 1, 1, 20, 20);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  quarto.putBox(80, 80, 1, 1, 2, 99);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  quarto.putBox(60, 60, 1, 1, 2, 99);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  quarto.putBox(40, 40, 1, 1, 2, 99);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  quarto.putBox(20, 20, 1, 1, 2, 99);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  quarto.setColor(0.55, 0.35, 0.1, 1); <span class="comment">// gavetas</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  quarto.putBox(2, 20, 2, 37, 60, 96);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  quarto.cutBox(20, 20, 2, 37, 95, 95);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  quarto.cutBox(20, 20, 2, 37, 61, 61);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  quarto.cutBox(20, 20, 27, 27, 62, 94);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  quarto.cutBox(20, 20, 17, 17, 62, 94);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  quarto.cutBox(20, 20, 7, 7, 62, 94);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  quarto.cutBox(10, 20, 3, 7, 63, 93); <span class="comment">// gaveta aberta</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  quarto.putBox(20, 29, 2, 2, 62, 94); </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  quarto.putBox(30, 30, 2, 7, 62, 94);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  quarto.putBox(10, 29, 2, 6, 62, 62);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  quarto.putBox(10, 29, 2, 6, 94, 94);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  quarto.setColor(0.4, 0.2, 0.1, 1);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  quarto.putBox(19, 19, 2, 37, 95, 95);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  quarto.putBox(19, 19, 2, 37, 61, 61);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  quarto.putBox(19, 19, 27, 27, 62, 94);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  quarto.putBox(19, 19, 17, 17, 62, 94);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  quarto.putBox(19, 19, 36, 36, 62, 94);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  quarto.putBox(19, 19, 7, 7, 62, 94);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  quarto.setColor(0.1, 0.1, 0.1, 1); </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  quarto.putBox(21, 21, 32, 32, 77, 79);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  quarto.putBox(21, 21, 22, 22, 77, 79);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  quarto.putBox(21, 21, 12, 12, 77, 79);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  quarto.putBox(31, 31, 4, 4, 77, 79);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  quarto.cutBox(19, 19, 37, 37, 61, 95);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  quarto.cutBox(20, 20, 3, 7, 63, 93);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  quarto.setColor(0.85, 0.1, 0.23, 1); <span class="comment">// roupas</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  quarto.putBox(14, 28, 4, 4, 63, 75);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  quarto.setColor(0.9, 0.53, 0.01, 1);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  quarto.putBox(14, 28, 6, 6, 63, 75);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  quarto.setColor(0.1, 0.45, 0.55, 1);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  quarto.putBox(14, 28, 5, 5, 63, 75);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  quarto.writeOFF(<span class="stringliteral">&quot;../quarto.off&quot;</span>); <span class="comment">// salvar no diretório acima</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
-<div class="ttc" id="aclass_sculptor_html"><div class="ttname"><a href="class_sculptor.html">Sculptor</a></div><div class="ttdef"><b>Definition:</b> sculptor.h:5</div></div>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;               {         </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_read_t_x_t.html">ReadTXT</a> arquivo(<span class="stringliteral">&quot;../../../input.txt&quot;</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_sculptor.html">Sculptor</a> figura(arquivo.getX(), arquivo.getY(), arquivo.getZ());</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    arquivo.draw(figura);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    figura.writeOFF(<span class="stringliteral">&quot;../../../output.off&quot;</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="ttc" id="aclass_read_t_x_t_html"><div class="ttname"><a href="class_read_t_x_t.html">ReadTXT</a></div><div class="ttdoc">Classe para ler o arquivo de comandos em formato TXT e alocar memória para as figuras que têm seus en...</div><div class="ttdef"><b>Definition:</b> readtxt.h:12</div></div>
+<div class="ttc" id="aclass_sculptor_html"><div class="ttname"><a href="class_sculptor.html">Sculptor</a></div><div class="ttdoc">Classe dos objetos que serão desenhados Métodos para desenhar, esconder, alocar e escrever.</div><div class="ttdef"><b>Definition:</b> sculptor.h:7</div></div>
 </div><!-- fragment -->
 </div>
 </div>
