@@ -123,87 +123,85 @@ Membros Públicos</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                                     {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::ifstream fin;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::string s;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    fin.open(filename);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (!fin.is_open()) {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Impossível encontrar o arquivo: &quot;</span> &lt;&lt; filename</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                  &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        exit(1);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">while</span> (fin.good()) {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        fin &gt;&gt; s;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span> (fin.good()) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;dim&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordtype">int</span> x, y, z;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                fin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                nx = x;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                ny = y;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                nz = z;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;Dimensões lidas: &quot;</span> &lt;&lt; nx &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; ny &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                          &lt;&lt; nz &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;putvoxel&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordtype">int</span> x0, y0, z0;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keywordtype">float</span> r, g, b, a;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                fin &gt;&gt; x0 &gt;&gt; y0 &gt;&gt; z0;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                fin &gt;&gt; r &gt;&gt; g &gt;&gt; b &gt;&gt; a;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                vetor.push_back(<span class="keyword">new</span> <a class="code" href="class_put_voxel.html">PutVoxel</a>(x0, y0, z0, r, g, b, a));</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;cutvoxel&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordtype">int</span> x0, y0, z0;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                fin &gt;&gt; x0 &gt;&gt; y0 &gt;&gt; z0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                vetor.push_back(<span class="keyword">new</span> <a class="code" href="class_cut_voxel.html">CutVoxel</a>(x0, y0, z0));</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;putbox&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordtype">int</span> x0, y0, z0, x1, y1, z1;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordtype">float</span> r, g, b, a;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                fin &gt;&gt; x0 &gt;&gt; x1 &gt;&gt; y0;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                fin &gt;&gt; y1 &gt;&gt; z0 &gt;&gt; z1;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                fin &gt;&gt; r &gt;&gt; g &gt;&gt; b &gt;&gt; a;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                vetor.push_back(<span class="keyword">new</span> <a class="code" href="class_put_box.html">PutBox</a>(x0, x1, y0, y1, z0, z1, r, g, b, a));</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;cutbox&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordtype">int</span> x0, y0, z0, x1, y1, z1;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordtype">float</span> r, g, b, a;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                fin &gt;&gt; x0 &gt;&gt; x1 &gt;&gt; y0;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                fin &gt;&gt; y1 &gt;&gt; z0 &gt;&gt; z1;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                vetor.push_back(<span class="keyword">new</span> <a class="code" href="class_cut_box.html">CutBox</a>(x0, x1, y0, y1, z0, z1));</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;putsphere&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordtype">int</span> xcenter, ycenter, zcenter, radius;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordtype">float</span> r, g, b, a;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                fin &gt;&gt; xcenter &gt;&gt; ycenter &gt;&gt; zcenter &gt;&gt; radius;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                fin &gt;&gt; r &gt;&gt; g &gt;&gt; b &gt;&gt; a;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                vetor.push_back(<span class="keyword">new</span> <a class="code" href="class_put_sphere.html">PutSphere</a>(xcenter, ycenter, zcenter, radius,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                              r, g, b, a));</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;cutsphere&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordtype">int</span> xcenter, ycenter, zcenter, radius;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordtype">float</span> r, g, b, a;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                fin &gt;&gt; xcenter &gt;&gt; ycenter &gt;&gt; zcenter &gt;&gt; radius;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                vetor.push_back(</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    <span class="keyword">new</span> <a class="code" href="class_cut_sphere.html">CutSphere</a>(xcenter, ycenter, zcenter, radius));</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;putellipsoid&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordtype">int</span> xcenter, ycenter, zcenter, rx, ry, rz;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordtype">float</span> r, g, b, a;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                fin &gt;&gt; xcenter &gt;&gt; ycenter &gt;&gt; zcenter;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                fin &gt;&gt; rx &gt;&gt; ry &gt;&gt; rz;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                fin &gt;&gt; r &gt;&gt; g &gt;&gt; b &gt;&gt; a;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                vetor.push_back(<span class="keyword">new</span> <a class="code" href="class_put_ellipsoid.html">PutEllipsoid</a>(xcenter, ycenter, zcenter, rx,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                                 ry, rz, r, g, b, a));</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;cutellipsoid&quot;</span>) == 0) {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordtype">int</span> xcenter, ycenter, zcenter, rx, ry, rz;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordtype">float</span> r, g, b, a;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                fin &gt;&gt; xcenter &gt;&gt; ycenter &gt;&gt; zcenter;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                fin &gt;&gt; rx &gt;&gt; ry &gt;&gt; rz;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                vetor.push_back(</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    <span class="keyword">new</span> <a class="code" href="class_cut_ellipsoid.html">CutEllipsoid</a>(xcenter, ycenter, zcenter, rx, ry, rz));</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Arquivo de entrada lido\n&quot;</span>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    fin.close();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span> (vetor.empty()) {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;O vetor de figuras geométricas está vazio\n&quot;</span>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;O vetor de figuras geométricas foi preenchido corretamente\n&quot;</span>;</div>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                     {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::ifstream fin;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::string s;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    fin.open(filename);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (!fin.is_open()) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Impossível encontrar o arquivo: &quot;</span> &lt;&lt; filename</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                  &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        exit(1);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">while</span> (fin.good()) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        fin &gt;&gt; s;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;dim&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordtype">int</span> x, y, z;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            fin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            nx = x;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            ny = y;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            nz = z;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Dimensões lidas: &quot;</span> &lt;&lt; nx &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; ny &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; nz</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;putvoxel&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordtype">int</span> x0, y0, z0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordtype">float</span> r, g, b, a;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            fin &gt;&gt; x0 &gt;&gt; y0 &gt;&gt; z0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            fin &gt;&gt; r &gt;&gt; g &gt;&gt; b &gt;&gt; a;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            vetor.push_back(<span class="keyword">new</span> <a class="code" href="class_put_voxel.html">PutVoxel</a>(x0, y0, z0, r, g, b, a));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;cutvoxel&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordtype">int</span> x0, y0, z0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            fin &gt;&gt; x0 &gt;&gt; y0 &gt;&gt; z0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            vetor.push_back(<span class="keyword">new</span> <a class="code" href="class_cut_voxel.html">CutVoxel</a>(x0, y0, z0));</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;putbox&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordtype">int</span> x0, y0, z0, x1, y1, z1;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordtype">float</span> r, g, b, a;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            fin &gt;&gt; x0 &gt;&gt; x1 &gt;&gt; y0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            fin &gt;&gt; y1 &gt;&gt; z0 &gt;&gt; z1;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            fin &gt;&gt; r &gt;&gt; g &gt;&gt; b &gt;&gt; a;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            vetor.push_back(<span class="keyword">new</span> <a class="code" href="class_put_box.html">PutBox</a>(x0, x1, y0, y1, z0, z1, r, g, b, a));</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;cutbox&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordtype">int</span> x0, y0, z0, x1, y1, z1;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordtype">float</span> r, g, b, a;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            fin &gt;&gt; x0 &gt;&gt; x1 &gt;&gt; y0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            fin &gt;&gt; y1 &gt;&gt; z0 &gt;&gt; z1;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            vetor.push_back(<span class="keyword">new</span> <a class="code" href="class_cut_box.html">CutBox</a>(x0, x1, y0, y1, z0, z1));</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;putsphere&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordtype">int</span> xcenter, ycenter, zcenter, radius;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordtype">float</span> r, g, b, a;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            fin &gt;&gt; xcenter &gt;&gt; ycenter &gt;&gt; zcenter &gt;&gt; radius;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            fin &gt;&gt; r &gt;&gt; g &gt;&gt; b &gt;&gt; a;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            vetor.push_back(</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keyword">new</span> <a class="code" href="class_put_sphere.html">PutSphere</a>(xcenter, ycenter, zcenter, radius, r, g, b, a));</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;cutsphere&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordtype">int</span> xcenter, ycenter, zcenter, radius;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordtype">float</span> r, g, b, a;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            fin &gt;&gt; xcenter &gt;&gt; ycenter &gt;&gt; zcenter &gt;&gt; radius;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            vetor.push_back(<span class="keyword">new</span> <a class="code" href="class_cut_sphere.html">CutSphere</a>(xcenter, ycenter, zcenter, radius));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;putellipsoid&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordtype">int</span> xcenter, ycenter, zcenter, rx, ry, rz;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordtype">float</span> r, g, b, a;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            fin &gt;&gt; xcenter &gt;&gt; ycenter &gt;&gt; zcenter;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            fin &gt;&gt; rx &gt;&gt; ry &gt;&gt; rz;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            fin &gt;&gt; r &gt;&gt; g &gt;&gt; b &gt;&gt; a;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            vetor.push_back(<span class="keyword">new</span> <a class="code" href="class_put_ellipsoid.html">PutEllipsoid</a>(xcenter, ycenter, zcenter, rx, ry,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                             rz, r, g, b, a));</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s.compare(<span class="stringliteral">&quot;cutellipsoid&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordtype">int</span> xcenter, ycenter, zcenter, rx, ry, rz;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordtype">float</span> r, g, b, a;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            fin &gt;&gt; xcenter &gt;&gt; ycenter &gt;&gt; zcenter;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            fin &gt;&gt; rx &gt;&gt; ry &gt;&gt; rz;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            vetor.push_back(</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keyword">new</span> <a class="code" href="class_cut_ellipsoid.html">CutEllipsoid</a>(xcenter, ycenter, zcenter, rx, ry, rz));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Arquivo de entrada lido\n&quot;</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    fin.close();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">if</span> (vetor.empty()) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;O vetor de figuras geométricas está vazio\n&quot;</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        std::cout</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;O vetor de figuras geométricas foi preenchido corretamente\n&quot;</span>;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 <div class="ttc" id="aclass_cut_box_html"><div class="ttname"><a href="class_cut_box.html">CutBox</a></div><div class="ttdoc">Classe para esconder uma caixa, herda de FiguraGeometrica Atributos exclusivos da classe: posição fin...</div><div class="ttdef"><b>Definition:</b> cutbox.h:9</div></div>
@@ -213,7 +211,7 @@ Membros Públicos</h2></td></tr>
 <div class="ttc" id="aclass_put_box_html"><div class="ttname"><a href="class_put_box.html">PutBox</a></div><div class="ttdoc">Classe para desenhar uma caixa, herda características de FiguraGeometrica Posições finais da caixa Co...</div><div class="ttdef"><b>Definition:</b> putbox.h:10</div></div>
 <div class="ttc" id="aclass_put_ellipsoid_html"><div class="ttname"><a href="class_put_ellipsoid.html">PutEllipsoid</a></div><div class="ttdoc">Classe para desenhar uma elipsóide, herda características de FiguraGeometrica Raios da elipsóide Cons...</div><div class="ttdef"><b>Definition:</b> putellipsoid.h:10</div></div>
 <div class="ttc" id="aclass_put_sphere_html"><div class="ttname"><a href="class_put_sphere.html">PutSphere</a></div><div class="ttdoc">Classe para desenhar uma esfera, herda características de FiguraGeometrica Raio da esfera Construtor ...</div><div class="ttdef"><b>Definition:</b> putsphere.h:10</div></div>
-<div class="ttc" id="aclass_put_voxel_html"><div class="ttname"><a href="class_put_voxel.html">PutVoxel</a></div><div class="ttdoc">Classe para desenhar um voxel, herda características de FiguraGeometrica Construtor da classe para de...</div><div class="ttdef"><b>Definition:</b> putvoxel.h:9</div></div>
+<div class="ttc" id="aclass_put_voxel_html"><div class="ttname"><a href="class_put_voxel.html">PutVoxel</a></div><div class="ttdoc">Classe para desenhar um voxel, herda características de FiguraGeometrica Construtor e destrutor da cl...</div><div class="ttdef"><b>Definition:</b> putvoxel.h:9</div></div>
 </div><!-- fragment -->
 </div>
 </div>

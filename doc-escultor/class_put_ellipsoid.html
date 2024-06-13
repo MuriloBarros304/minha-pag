@@ -92,6 +92,7 @@ Membros Públicos</h2></td></tr>
 <tr class="memdesc:a4b7bd5b2a9a879f093acf58e2c19055b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe para desenhar uma elipsóide.  <a href="class_put_ellipsoid.html#a4b7bd5b2a9a879f093acf58e2c19055b">Mais...</a><br /></td></tr>
 <tr class="separator:a4b7bd5b2a9a879f093acf58e2c19055b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a82dd453d32a966218d3bea49406872"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_put_ellipsoid.html#a2a82dd453d32a966218d3bea49406872">~PutEllipsoid</a> ()</td></tr>
+<tr class="memdesc:a2a82dd453d32a966218d3bea49406872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe.  <a href="class_put_ellipsoid.html#a2a82dd453d32a966218d3bea49406872">Mais...</a><br /></td></tr>
 <tr class="separator:a2a82dd453d32a966218d3bea49406872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a961faff306dad93a4b68a35ad9c3027b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_put_ellipsoid.html#a961faff306dad93a4b68a35ad9c3027b">draw</a> (<a class="el" href="class_sculptor.html">Sculptor</a> &amp;t)</td></tr>
 <tr class="memdesc:a961faff306dad93a4b68a35ad9c3027b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método herdado da classe abstrata pura <a class="el" href="class_figura_geometrica.html" title="Classe abstrata pura que passa por herança o método draw() e os atributos de uma figura genérica Posi...">FiguraGeometrica</a>.  <a href="class_put_ellipsoid.html#a961faff306dad93a4b68a35ad9c3027b">Mais...</a><br /></td></tr>
@@ -100,7 +101,7 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a81d7c7efaea511e60a15f5a363138dd9 inherit pub_methods_class_figura_geometrica"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_figura_geometrica.html#a81d7c7efaea511e60a15f5a363138dd9">FiguraGeometrica</a> ()</td></tr>
 <tr class="memdesc:a81d7c7efaea511e60a15f5a363138dd9 inherit pub_methods_class_figura_geometrica"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe abstrata.  <a href="class_figura_geometrica.html#a81d7c7efaea511e60a15f5a363138dd9">Mais...</a><br /></td></tr>
 <tr class="separator:a81d7c7efaea511e60a15f5a363138dd9 inherit pub_methods_class_figura_geometrica"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad13b9bccf1b14f6b9fbc662aad61ffd1 inherit pub_methods_class_figura_geometrica"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_figura_geometrica.html#ad13b9bccf1b14f6b9fbc662aad61ffd1">~FiguraGeometrica</a> ()</td></tr>
+<tr class="memitem:ad13b9bccf1b14f6b9fbc662aad61ffd1 inherit pub_methods_class_figura_geometrica"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_figura_geometrica.html#ad13b9bccf1b14f6b9fbc662aad61ffd1">~FiguraGeometrica</a> ()</td></tr>
 <tr class="memdesc:ad13b9bccf1b14f6b9fbc662aad61ffd1 inherit pub_methods_class_figura_geometrica"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe abstrata.  <a href="class_figura_geometrica.html#ad13b9bccf1b14f6b9fbc662aad61ffd1">Mais...</a><br /></td></tr>
 <tr class="separator:ad13b9bccf1b14f6b9fbc662aad61ffd1 inherit pub_methods_class_figura_geometrica"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -260,7 +261,9 @@ Atributos Protegidos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{}</div>
+
+<p>Destrutor da classe. </p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -298,35 +301,35 @@ Atributos Protegidos</h2></td></tr>
 </dl>
 
 <p>Implementa <a class="el" href="class_figura_geometrica.html#a34585fd7c0bd7378fc69c4ee208e676c">FiguraGeometrica</a>.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                   {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> i, j, k, xi, xf, yi, yf, zi, zf, rx2, ry2, rz2, dx, dy, dz;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// (x - xc)² / rx² + (y - yc)² / ry² + (z - zc)² / rz² = 1</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// limites do elipsoide</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    rx2 = <a class="code" href="class_put_ellipsoid.html#a01c481bb5441245c5e8e879681899d56">rx</a> * <a class="code" href="class_put_ellipsoid.html#a01c481bb5441245c5e8e879681899d56">rx</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    ry2 = <a class="code" href="class_put_ellipsoid.html#a4f4274c00346b59e57154b23df712bd4">ry</a> * <a class="code" href="class_put_ellipsoid.html#a4f4274c00346b59e57154b23df712bd4">ry</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    rz2 = <a class="code" href="class_put_ellipsoid.html#aaf53d3f0093a1ab471f78da1c24a3606">rz</a> * <a class="code" href="class_put_ellipsoid.html#aaf53d3f0093a1ab471f78da1c24a3606">rz</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    xi = <a class="code" href="class_figura_geometrica.html#a5323e410d03d32cded2ccc91a8c09a21">x0</a> - <a class="code" href="class_put_ellipsoid.html#a01c481bb5441245c5e8e879681899d56">rx</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    xf = <a class="code" href="class_figura_geometrica.html#a5323e410d03d32cded2ccc91a8c09a21">x0</a> + <a class="code" href="class_put_ellipsoid.html#a01c481bb5441245c5e8e879681899d56">rx</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    yi = <a class="code" href="class_figura_geometrica.html#ac297b20ea6086ab380b7d29a6094890f">y0</a> - <a class="code" href="class_put_ellipsoid.html#a4f4274c00346b59e57154b23df712bd4">ry</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    yf = <a class="code" href="class_figura_geometrica.html#ac297b20ea6086ab380b7d29a6094890f">y0</a> + <a class="code" href="class_put_ellipsoid.html#a4f4274c00346b59e57154b23df712bd4">ry</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    zi = <a class="code" href="class_figura_geometrica.html#a383bb961c95829e69706535b5495a9ae">z0</a> - <a class="code" href="class_put_ellipsoid.html#aaf53d3f0093a1ab471f78da1c24a3606">rz</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    zf = <a class="code" href="class_figura_geometrica.html#a383bb961c95829e69706535b5495a9ae">z0</a> + <a class="code" href="class_put_ellipsoid.html#aaf53d3f0093a1ab471f78da1c24a3606">rz</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">for</span> (i = xi; i &lt;= xf; i++) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        dx = (i - <a class="code" href="class_figura_geometrica.html#a5323e410d03d32cded2ccc91a8c09a21">x0</a>) * (i - <a class="code" href="class_figura_geometrica.html#a5323e410d03d32cded2ccc91a8c09a21">x0</a>);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">for</span> (j = yi; j &lt;= yf; j++) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            dy = (j - <a class="code" href="class_figura_geometrica.html#ac297b20ea6086ab380b7d29a6094890f">y0</a>) * (j - <a class="code" href="class_figura_geometrica.html#ac297b20ea6086ab380b7d29a6094890f">y0</a>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">for</span> (k = zi; k &lt;= zf; k++) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                dz = (k - <a class="code" href="class_figura_geometrica.html#a383bb961c95829e69706535b5495a9ae">z0</a>) * (k - <a class="code" href="class_figura_geometrica.html#a383bb961c95829e69706535b5495a9ae">z0</a>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordflow">if</span> ((dx / rx2 + dy / ry2 + dz / rz2) &lt;= 1) {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    t.<a class="code" href="class_sculptor.html#a4351c930a07887e96d4fdbf251a7867e">setColor</a>(<a class="code" href="class_figura_geometrica.html#a0a4f57efb1a6c525c8aeee34c92e7eab">r</a>, <a class="code" href="class_figura_geometrica.html#a51930549bcb90d016b824f10f95df355">g</a>, <a class="code" href="class_figura_geometrica.html#a25e5d6c21410103c25ec55c0117dac0d">b</a>, <a class="code" href="class_figura_geometrica.html#ae7c8a027fcec3c357265b90458a4d165">a</a>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    t.<a class="code" href="class_sculptor.html#a4bdea3048b419d58e93074060eaa7b52">putVoxel</a>(i, j, k);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="ttc" id="aclass_sculptor_html_a4351c930a07887e96d4fdbf251a7867e"><div class="ttname"><a href="class_sculptor.html#a4351c930a07887e96d4fdbf251a7867e">Sculptor::setColor</a></div><div class="ttdeci">void setColor(float r, float g, float b, float a)</div><div class="ttdoc">Define a cor e transparência nos próximos comandos.</div><div class="ttdef"><b>Definition:</b> sculptor.cpp:47</div></div>
-<div class="ttc" id="aclass_sculptor_html_a4bdea3048b419d58e93074060eaa7b52"><div class="ttname"><a href="class_sculptor.html#a4bdea3048b419d58e93074060eaa7b52">Sculptor::putVoxel</a></div><div class="ttdeci">void putVoxel(int x, int y, int z)</div><div class="ttdoc">Adiciona um único voxel à escultura.</div><div class="ttdef"><b>Definition:</b> sculptor.cpp:61</div></div>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                   {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> i, j, k, xi, xf, yi, yf, zi, zf, rx2, ry2, rz2, dx, dy, dz;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// (x - xc)² / rx² + (y - yc)² / ry² + (z - zc)² / rz² = 1</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// limites do elipsoide</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    rx2 = <a class="code" href="class_put_ellipsoid.html#a01c481bb5441245c5e8e879681899d56">rx</a> * <a class="code" href="class_put_ellipsoid.html#a01c481bb5441245c5e8e879681899d56">rx</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ry2 = <a class="code" href="class_put_ellipsoid.html#a4f4274c00346b59e57154b23df712bd4">ry</a> * <a class="code" href="class_put_ellipsoid.html#a4f4274c00346b59e57154b23df712bd4">ry</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    rz2 = <a class="code" href="class_put_ellipsoid.html#aaf53d3f0093a1ab471f78da1c24a3606">rz</a> * <a class="code" href="class_put_ellipsoid.html#aaf53d3f0093a1ab471f78da1c24a3606">rz</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    xi = <a class="code" href="class_figura_geometrica.html#a5323e410d03d32cded2ccc91a8c09a21">x0</a> - <a class="code" href="class_put_ellipsoid.html#a01c481bb5441245c5e8e879681899d56">rx</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    xf = <a class="code" href="class_figura_geometrica.html#a5323e410d03d32cded2ccc91a8c09a21">x0</a> + <a class="code" href="class_put_ellipsoid.html#a01c481bb5441245c5e8e879681899d56">rx</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    yi = <a class="code" href="class_figura_geometrica.html#ac297b20ea6086ab380b7d29a6094890f">y0</a> - <a class="code" href="class_put_ellipsoid.html#a4f4274c00346b59e57154b23df712bd4">ry</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    yf = <a class="code" href="class_figura_geometrica.html#ac297b20ea6086ab380b7d29a6094890f">y0</a> + <a class="code" href="class_put_ellipsoid.html#a4f4274c00346b59e57154b23df712bd4">ry</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    zi = <a class="code" href="class_figura_geometrica.html#a383bb961c95829e69706535b5495a9ae">z0</a> - <a class="code" href="class_put_ellipsoid.html#aaf53d3f0093a1ab471f78da1c24a3606">rz</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    zf = <a class="code" href="class_figura_geometrica.html#a383bb961c95829e69706535b5495a9ae">z0</a> + <a class="code" href="class_put_ellipsoid.html#aaf53d3f0093a1ab471f78da1c24a3606">rz</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">for</span> (i = xi; i &lt;= xf; i++) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        dx = (i - <a class="code" href="class_figura_geometrica.html#a5323e410d03d32cded2ccc91a8c09a21">x0</a>) * (i - <a class="code" href="class_figura_geometrica.html#a5323e410d03d32cded2ccc91a8c09a21">x0</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">for</span> (j = yi; j &lt;= yf; j++) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            dy = (j - <a class="code" href="class_figura_geometrica.html#ac297b20ea6086ab380b7d29a6094890f">y0</a>) * (j - <a class="code" href="class_figura_geometrica.html#ac297b20ea6086ab380b7d29a6094890f">y0</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">for</span> (k = zi; k &lt;= zf; k++) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                dz = (k - <a class="code" href="class_figura_geometrica.html#a383bb961c95829e69706535b5495a9ae">z0</a>) * (k - <a class="code" href="class_figura_geometrica.html#a383bb961c95829e69706535b5495a9ae">z0</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">if</span> ((dx / rx2 + dy / ry2 + dz / rz2) &lt;= 1) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    t.<a class="code" href="class_sculptor.html#a4351c930a07887e96d4fdbf251a7867e">setColor</a>(<a class="code" href="class_figura_geometrica.html#a0a4f57efb1a6c525c8aeee34c92e7eab">r</a>, <a class="code" href="class_figura_geometrica.html#a51930549bcb90d016b824f10f95df355">g</a>, <a class="code" href="class_figura_geometrica.html#a25e5d6c21410103c25ec55c0117dac0d">b</a>, <a class="code" href="class_figura_geometrica.html#ae7c8a027fcec3c357265b90458a4d165">a</a>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    t.<a class="code" href="class_sculptor.html#a4bdea3048b419d58e93074060eaa7b52">putVoxel</a>(i, j, k);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="ttc" id="aclass_sculptor_html_a4351c930a07887e96d4fdbf251a7867e"><div class="ttname"><a href="class_sculptor.html#a4351c930a07887e96d4fdbf251a7867e">Sculptor::setColor</a></div><div class="ttdeci">void setColor(float r, float g, float b, float a)</div><div class="ttdoc">Define a cor e transparência nos próximos comandos.</div><div class="ttdef"><b>Definition:</b> sculptor.cpp:49</div></div>
+<div class="ttc" id="aclass_sculptor_html_a4bdea3048b419d58e93074060eaa7b52"><div class="ttname"><a href="class_sculptor.html#a4bdea3048b419d58e93074060eaa7b52">Sculptor::putVoxel</a></div><div class="ttdeci">void putVoxel(int x, int y, int z)</div><div class="ttdoc">Adiciona um único voxel à escultura.</div><div class="ttdef"><b>Definition:</b> sculptor.cpp:63</div></div>
 </div><!-- fragment -->
 </div>
 </div>

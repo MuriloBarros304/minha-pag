@@ -89,7 +89,7 @@ Diagrama de hierarquia para FiguraGeometrica:</div>
 <area href="class_put_box.html" title="Classe para desenhar uma caixa, herda características de FiguraGeometrica Posições finais da caixa Co..." alt="PutBox" shape="rect" coords="123,280,236,304"/>
 <area href="class_put_ellipsoid.html" title="Classe para desenhar uma elipsóide, herda características de FiguraGeometrica Raios da elipsóide Cons..." alt="PutEllipsoid" shape="rect" coords="123,336,236,360"/>
 <area href="class_put_sphere.html" title="Classe para desenhar uma esfera, herda características de FiguraGeometrica Raio da esfera Construtor ..." alt="PutSphere" shape="rect" coords="123,392,236,416"/>
-<area href="class_put_voxel.html" title="Classe para desenhar um voxel, herda características de FiguraGeometrica Construtor da classe para de..." alt="PutVoxel" shape="rect" coords="123,448,236,472"/>
+<area href="class_put_voxel.html" title="Classe para desenhar um voxel, herda características de FiguraGeometrica Construtor e destrutor da cl..." alt="PutVoxel" shape="rect" coords="123,448,236,472"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -98,7 +98,7 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a81d7c7efaea511e60a15f5a363138dd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_figura_geometrica.html#a81d7c7efaea511e60a15f5a363138dd9">FiguraGeometrica</a> ()</td></tr>
 <tr class="memdesc:a81d7c7efaea511e60a15f5a363138dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe abstrata.  <a href="class_figura_geometrica.html#a81d7c7efaea511e60a15f5a363138dd9">Mais...</a><br /></td></tr>
 <tr class="separator:a81d7c7efaea511e60a15f5a363138dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad13b9bccf1b14f6b9fbc662aad61ffd1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_figura_geometrica.html#ad13b9bccf1b14f6b9fbc662aad61ffd1">~FiguraGeometrica</a> ()</td></tr>
+<tr class="memitem:ad13b9bccf1b14f6b9fbc662aad61ffd1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_figura_geometrica.html#ad13b9bccf1b14f6b9fbc662aad61ffd1">~FiguraGeometrica</a> ()</td></tr>
 <tr class="memdesc:ad13b9bccf1b14f6b9fbc662aad61ffd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe abstrata.  <a href="class_figura_geometrica.html#ad13b9bccf1b14f6b9fbc662aad61ffd1">Mais...</a><br /></td></tr>
 <tr class="separator:ad13b9bccf1b14f6b9fbc662aad61ffd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34585fd7c0bd7378fc69c4ee208e676c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_figura_geometrica.html#a34585fd7c0bd7378fc69c4ee208e676c">draw</a> (<a class="el" href="class_sculptor.html">Sculptor</a> &amp;t)=0</td></tr>
@@ -140,9 +140,7 @@ Atributos Protegidos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construtor da classe abstrata. </p>
-<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                    {</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -151,6 +149,9 @@ Atributos Protegidos</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">FiguraGeometrica::~FiguraGeometrica </td>
@@ -159,12 +160,15 @@ Atributos Protegidos</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Destrutor da classe abstrata. </p>
-<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                     {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
