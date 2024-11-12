@@ -59,11 +59,11 @@ body {
     min-height: 100vh; /* Altura mínima da div para que o conteúdo fique centralizado verticalmente */
 }
 
-.container div a:hover {
+.container div a:hover { /* Adiciona uma cor de fundo quando o mouse passa sobre o link */
     color: #fff
 }
 
-ul {
+ul { /* Remove a formatação padrão da lista */
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -87,6 +87,6 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: #8474a0; /* Adiciona uma cor de fundo quando o mouse passa sobre o link */
+    background-color: #4b8cb7; /* Adiciona uma cor de fundo quando o mouse passa sobre o link */
 }
 
