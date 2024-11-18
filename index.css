@@ -1,92 +1,109 @@
+/* Reset de margens e paddings */
 * {
-    margin: 5px;
-    padding: 5px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo do corpo */
 body {
     background-color: #150f24;
     color: #ffffff;
+    padding-top: 60px; 
 }
 
+/* Estilo da container principal */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 75%;
+    max-width: 1200px;
     margin: auto;
+    padding: 20px;
 }
 
-.container div p {
+/* Estilo dos parágrafos */
+.container section p {
     font: 300 20px/140% 'Roboto Mono', sans-serif;
     text-align: justify;
-    margin: 10px; /* Adiciona um espaço entre os parágrafos */
-
+    margin: 10px;
 }
 
-.container div figure {
+/* Estilo das figuras */
+.container figure {
     max-width: 1024px;
-    max-height: auto;
-    margin: auto;
-    text-align: justify;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.container div figure img {
+.container figure img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
 }
 
-.container div figure figcaption {
+.container figure figcaption {
     text-align: center;
-    margin-top: 1;
+    margin-top: 10px;
 }
 
-.container h2{
+/* Estilo dos títulos */
+.container h2 {
     font: 450 32px 'Montserrat', sans-serif;
     text-align: center;
+    margin-bottom: 20px;
 }
 
-#space, #peplot, #rbf, #escultor {
+html {
+    scroll-behavior: smooth;
+}
+
+/* Seções dos projetos */
+.project-section {
+    scroll-margin-top: 80px;
     font: 200 20px 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Altura mínima da div para que o conteúdo fique centralizado verticalmente */
+    padding: 40px 20px;
+    margin-bottom: 20px;
 }
 
-.container div a:hover { /* Adiciona uma cor de fundo quando o mouse passa sobre o link */
-    color: #fff
-}
-
-ul { /* Remove a formatação padrão da lista */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/* Menu de navegação */
+nav {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #333; /* Adiciona um fundo para os links de navegação */
-    width: 100%; /* Faz a largura da lista ser igual à largura da janela do navegador */
-    z-index: 1000; /* Garante que os links de navegação fiquem acima de outros elementos */
+    width: 100%;
+    background-color: #202020;
+    z-index: 1000;
 }
 
-ul li {
-    display: inline; /* Faz os itens da lista aparecerem horizontalmente */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
 }
 
-ul li a {
-    display: inline-block;
-    padding: 10px 20px; /* Adiciona um espaçamento interno aos links */
+/* Itens do menu */
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-ul li a:hover {
-    background-color: #4b8cb7; /* Adiciona uma cor de fundo quando o mouse passa sobre o link */
+/* Efeito hover */
+nav ul li a:hover {
+    background-color: #4b8cb7;
+    color: #04135f;
 }
-
